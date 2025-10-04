@@ -1,0 +1,262 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Green Color Palette */
+  --nyanza: #d8f3dc;
+  --celadon: #b7e4c7;
+  --celadon-2: #95d5b2;
+  --mint: #74c69d;
+  --mint-2: #52b788;
+  --sea-green: #40916c;
+  --dartmouth-green: #2d6a4f;
+  --brunswick-green: #1b4332;
+  --dark-green: #081c15;
+  
+  /* Updated Color System */
+  --color-primary: var(--sea-green);
+  --color-primary-light: var(--mint);
+  --color-primary-dark: var(--dartmouth-green);
+  --color-secondary: var(--mint-2);
+  --color-accent: var(--celadon-2);
+  --color-success: var(--mint-2);
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  --color-info: #3b82f6;
+  
+  /* Background colors */
+  --bg-primary: var(--nyanza);
+  --bg-secondary: var(--celadon);
+  --bg-dark: var(--brunswick-green);
+  --bg-darker: var(--dark-green);
+}
+
+/* Metrics-adjusted fallback keeps layout stable before Inter loads */
+@font-face {
+  font-family: 'Inter Fallback';
+  src: local('Arial');
+  ascent-override: 90%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+  size-adjust: 107%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Inter Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+}
+/* Prose styles for product descriptions */
+.prose {
+  color: #374151;
+  line-height: 1.75;
+}
+
+.prose p {
+  margin-bottom: 1.25em;
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+  color: #111827;
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 0.5em;
+  margin-top: 1.5em;
+}
+
+.prose h1 { font-size: 2.25em; }
+.prose h2 { font-size: 1.875em; }
+.prose h3 { font-size: 1.5em; }
+.prose h4 { font-size: 1.25em; }
+
+.prose ul, .prose ol {
+  margin-bottom: 1.25em;
+  padding-left: 1.625em;
+}
+
+.prose li {
+  margin-bottom: 0.5em;
+}
+
+.prose strong {
+  font-weight: 600;
+  color: #111827;
+}
+
+.prose em {
+  font-style: italic;
+}
+
+.prose blockquote {
+  font-style: italic;
+  border-left: 4px solid #d1d5db;
+  padding-left: 1em;
+  margin: 1.6em 0;
+  color: #6b7280;
+}
+
+/* Line clamp utility */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Aspect ratio utilities for images */
+.aspect-w-1 {
+  position: relative;
+  width: 100%;
+}
+
+.aspect-w-1:before {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.aspect-h-1 > * {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Focus styles for accessibility */
+.focus\:ring-2:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px var(--tw-ring-color);
+}
+
+/* Layout shift prevention */
+.prevent-layout-shift {
+  font-display: block;
+  font-variation-settings: normal;
+}
+
+/* Animation utilities */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Button hover effects */
+.btn-hover {
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-hover:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Image hover effects */
+.image-hover {
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-hover:hover {
+  transform: scale(1.05);
+}
+
+/* Loading state */
+.loading-skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, transparent 37%, #f0f0f0 63%);
+  background-size: 400% 100%;
+  animation: skeleton-loading 1.4s ease infinite;
+}
+
+@keyframes skeleton-loading {
+  0% { background-position: 100% 50%; }
+  100% { background-position: -100% 50%; }
+}
+
+/* Blurhash Image Transitions */
+.blurhash-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.blurhash-placeholder {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.blurhash-image {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.blurhash-loaded .blurhash-placeholder {
+  opacity: 0;
+}
+
+.blurhash-loaded .blurhash-image {
+  opacity: 1;
+}
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  .mobile-padding {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* Prevent horizontal scroll on mobile */
+  body {
+    overflow-x: hidden;
+  }
+  
+  /* Touch-friendly button sizes */
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Prevent zoom on input focus for iOS */
+  input[type="text"],
+  input[type="email"], 
+  input[type="password"],
+  textarea {
+    font-size: 16px;
+  }
+}

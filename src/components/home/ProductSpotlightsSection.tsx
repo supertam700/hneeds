@@ -1,0 +1,334 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { Button } from '../ui/Button';
+
+const DISHWASH_IMAGE = {
+  src: '/images/dishwash/DishWash-2_yv5oh0_c_scale,w_536.png',
+  srcSet: [
+    '/images/dishwash/DishWash-2_yv5oh0_c_scale,w_200.png 200w',
+    '/images/dishwash/DishWash-2_yv5oh0_c_scale,w_315.png 315w',
+    '/images/dishwash/DishWash-2_yv5oh0_c_scale,w_401.png 401w',
+    '/images/dishwash/DishWash-2_yv5oh0_c_scale,w_476.png 476w',
+    '/images/dishwash/DishWash-2_yv5oh0_c_scale,w_536.png 536w',
+    '/images/dishwash/DishWash-2_yv5oh0_c_scale,w_590.png 590w',
+    '/images/dishwash/DishWash-2_yv5oh0_c_scale,w_684.png 684w',
+    '/images/dishwash/DishWash-2_yv5oh0_c_scale,w_769.png 769w',
+    '/images/dishwash/DishWash-2_yv5oh0_c_scale,w_808.png 808w',
+    '/images/dishwash/DishWash-2_yv5oh0_c_scale,w_846.png 846w',
+    '/images/dishwash/DishWash-2_yv5oh0_c_scale,w_985.png 985w',
+    '/images/dishwash/DishWash-2_yv5oh0_c_scale,w_1022.png 1022w',
+    '/images/dishwash/DishWash-2_yv5oh0_c_scale,w_1023.png 1023w',
+  ].join(', '),
+};
+
+const FABRIC_IMAGE = {
+  src: '/images/fabricwash/Fabric-5_ixgphh_c_scale,w_536.png',
+  srcSet: [
+    '/images/fabricwash/Fabric-5_ixgphh_c_scale,w_200.png 200w',
+    '/images/fabricwash/Fabric-5_ixgphh_c_scale,w_313.png 313w',
+    '/images/fabricwash/Fabric-5_ixgphh_c_scale,w_399.png 399w',
+    '/images/fabricwash/Fabric-5_ixgphh_c_scale,w_474.png 474w',
+    '/images/fabricwash/Fabric-5_ixgphh_c_scale,w_536.png 536w',
+    '/images/fabricwash/Fabric-5_ixgphh_c_scale,w_589.png 589w',
+    '/images/fabricwash/Fabric-5_ixgphh_c_scale,w_638.png 638w',
+    '/images/fabricwash/Fabric-5_ixgphh_c_scale,w_684.png 684w',
+    '/images/fabricwash/Fabric-5_ixgphh_c_scale,w_729.png 729w',
+    '/images/fabricwash/Fabric-5_ixgphh_c_scale,w_765.png 765w',
+    '/images/fabricwash/Fabric-5_ixgphh_c_scale,w_807.png 807w',
+    '/images/fabricwash/Fabric-5_ixgphh_c_scale,w_843.png 843w',
+    '/images/fabricwash/Fabric-5_ixgphh_c_scale,w_879.png 879w',
+    '/images/fabricwash/Fabric-5_ixgphh_c_scale,w_915.png 915w',
+    '/images/fabricwash/Fabric-5_ixgphh_c_scale,w_949.png 949w',
+    '/images/fabricwash/Fabric-5_ixgphh_c_scale,w_982.png 982w',
+    '/images/fabricwash/Fabric-5_ixgphh_c_scale,w_1017.png 1017w',
+    '/images/fabricwash/Fabric-5_ixgphh_c_scale,w_1023.png 1023w',
+  ].join(', '),
+};
+
+const FLOOR_IMAGE = {
+  src: '/images/floorwash/FloorWash-4_nahtqx_c_scale,w_586.png',
+  srcSet: [
+    '/images/floorwash/FloorWash-4_nahtqx_c_scale,w_200.png 200w',
+    '/images/floorwash/FloorWash-4_nahtqx_c_scale,w_311.png 311w',
+    '/images/floorwash/FloorWash-4_nahtqx_c_scale,w_396.png 396w',
+    '/images/floorwash/FloorWash-4_nahtqx_c_scale,w_470.png 470w',
+    '/images/floorwash/FloorWash-4_nahtqx_c_scale,w_532.png 532w',
+    '/images/floorwash/FloorWash-4_nahtqx_c_scale,w_586.png 586w',
+    '/images/floorwash/FloorWash-4_nahtqx_c_scale,w_635.png 635w',
+    '/images/floorwash/FloorWash-4_nahtqx_c_scale,w_681.png 681w',
+    '/images/floorwash/FloorWash-4_nahtqx_c_scale,w_728.png 728w',
+    '/images/floorwash/FloorWash-4_nahtqx_c_scale,w_766.png 766w',
+    '/images/floorwash/FloorWash-4_nahtqx_c_scale,w_805.png 805w',
+    '/images/floorwash/FloorWash-4_nahtqx_c_scale,w_843.png 843w',
+    '/images/floorwash/FloorWash-4_nahtqx_c_scale,w_879.png 879w',
+    '/images/floorwash/FloorWash-4_nahtqx_c_scale,w_914.png 914w',
+    '/images/floorwash/FloorWash-4_nahtqx_c_scale,w_948.png 948w',
+    '/images/floorwash/FloorWash-4_nahtqx_c_scale,w_981.png 981w',
+    '/images/floorwash/FloorWash-4_nahtqx_c_scale,w_1014.png 1014w',
+    '/images/floorwash/FloorWash-4_nahtqx_c_scale,w_1023.png 1023w',
+    '/images/floorwash/FloorWash-4_nahtqx_c_scale,w_1024.png 1024w',
+  ].join(', '),
+};
+
+const COMBO_IMAGE = {
+  src: '/images/combooffer/ComboOrganicOffer-1-1_bjvowu_c_scale,w_1400.jpg',
+  srcSet: [
+    '/images/combooffer/ComboOrganicOffer-1-1_bjvowu_c_scale,w_200.jpg 200w',
+    '/images/combooffer/ComboOrganicOffer-1-1_bjvowu_c_scale,w_334.jpg 334w',
+    '/images/combooffer/ComboOrganicOffer-1-1_bjvowu_c_scale,w_430.jpg 430w',
+    '/images/combooffer/ComboOrganicOffer-1-1_bjvowu_c_scale,w_543.jpg 543w',
+    '/images/combooffer/ComboOrganicOffer-1-1_bjvowu_c_scale,w_644.jpg 644w',
+    '/images/combooffer/ComboOrganicOffer-1-1_bjvowu_c_scale,w_735.jpg 735w',
+    '/images/combooffer/ComboOrganicOffer-1-1_bjvowu_c_scale,w_844.jpg 844w',
+    '/images/combooffer/ComboOrganicOffer-1-1_bjvowu_c_scale,w_924.jpg 924w',
+    '/images/combooffer/ComboOrganicOffer-1-1_bjvowu_c_scale,w_1011.jpg 1011w',
+    '/images/combooffer/ComboOrganicOffer-1-1_bjvowu_c_scale,w_1100.jpg 1100w',
+    '/images/combooffer/ComboOrganicOffer-1-1_bjvowu_c_scale,w_1199.jpg 1199w',
+    '/images/combooffer/ComboOrganicOffer-1-1_bjvowu_c_scale,w_1281.jpg 1281w',
+    '/images/combooffer/ComboOrganicOffer-1-1_bjvowu_c_scale,w_1365.jpg 1365w',
+    '/images/combooffer/ComboOrganicOffer-1-1_bjvowu_c_scale,w_1400.jpg 1400w',
+  ].join(', '),
+};
+
+export const ProductSpotlightsSection: React.FC = () => {
+  return (
+    <section className="py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Organic Dish Wash Section */}
+        <div className="mb-16">
+          <div className="bg-gradient-to-br from-nyanza to-celadon/30 rounded-3xl shadow-lg p-8 lg:p-12 border border-celadon/30">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-brunswick-green mb-6">
+                  Organic Dish Wash
+                </h2>
+                <p className="text-lg text-dartmouth-green mb-6 leading-relaxed">
+                  Say goodbye to greasy dishes. Our plant-powered formula removes oil and grime naturally while being gentle on your hands and safe for your family.
+                </p>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center text-dartmouth-green">
+                    <div className="w-3 h-3 bg-mint-2 rounded-full mr-4 flex-shrink-0" />
+                    <span>Tough on grease, soft on skin</span>
+                  </li>
+                  <li className="flex items-center text-dartmouth-green">
+                    <div className="w-3 h-3 bg-mint-2 rounded-full mr-4 flex-shrink-0" />
+                    <span>Mild natural fragrance</span>
+                  </li>
+                  <li className="flex items-center text-dartmouth-green">
+                    <div className="w-3 h-3 bg-mint-2 rounded-full mr-4 flex-shrink-0" />
+                    <span>No toxic chemicals</span>
+                  </li>
+                </ul>
+                <Link to="/products/feathers-organic-dish-wash">
+                  <Button
+                    size="lg"
+                    className="px-8 py-4 text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-200"
+                  >
+                    Shop Dish Wash
+                    <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </Link>
+              </div>
+              <div className="text-center relative">
+                <Link to="/products/feathers-organic-dish-wash">
+                  <div className="relative group overflow-hidden rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-300 cursor-pointer">
+                    <div className="bg-gradient-to-br from-white to-nyanza/50 p-6">
+                      <img
+                        src={DISHWASH_IMAGE.src}
+                        srcSet={DISHWASH_IMAGE.srcSet}
+                        sizes="(max-width: 480px) 280px, (max-width: 768px) 400px, (max-width: 1024px) 480px, 520px"
+                        alt="Organic Dish Wash Product"
+                        width={536}
+                        height={536}
+                        className="w-full h-auto object-contain max-w-md mx-auto transform group-hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                      <div className="bg-mint-2 text-white px-6 py-2 rounded-full text-sm font-semibold shadow-lg">
+                        Plant-Powered Cleaning
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Organic Fabric Wash Section */}
+        <div className="mb-16">
+          <div className="bg-gradient-to-bl from-celadon/30 to-mint/20 rounded-3xl shadow-lg p-8 lg:p-12 border border-mint/30">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div className="order-2 lg:order-1 text-center relative">
+                <Link to="/products/feathers-organic-fabric-wash">
+                  <div className="relative group overflow-hidden rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-300 cursor-pointer">
+                    <div className="bg-gradient-to-br from-white to-celadon/30 p-6">
+                      <img
+                        src={FABRIC_IMAGE.src}
+                        srcSet={FABRIC_IMAGE.srcSet}
+                        sizes="(max-width: 480px) 280px, (max-width: 768px) 400px, (max-width: 1024px) 480px, 536px"
+                        alt="Organic Fabric Wash Product"
+                        width={536}
+                        height={536}
+                        className="w-full h-auto object-contain max-w-md mx-auto transform group-hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                      <div className="bg-sea-green text-white px-6 py-2 rounded-full text-sm font-semibold shadow-lg">
+                        Gentle on Fabrics
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+              <div className="order-1 lg:order-2 flex flex-col justify-center">
+                <h2 className="text-3xl md:text-4xl font-bold text-brunswick-green mb-6">
+                  Organic Fabric Wash
+                </h2>
+                <p className="text-lg text-dartmouth-green mb-6 leading-relaxed">
+                  Protect your clothes and your skin. Our organic fabric wash keeps colors bright, removes stains effectively, and is perfect for sensitive skin.
+                </p>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center text-dartmouth-green">
+                    <div className="w-3 h-3 bg-mint-2 rounded-full mr-4 flex-shrink-0" />
+                    <span>Gentle on fabrics, safe for kids</span>
+                  </li>
+                  <li className="flex items-center text-dartmouth-green">
+                    <div className="w-3 h-3 bg-mint-2 rounded-full mr-4 flex-shrink-0" />
+                    <span>Eco-friendly and biodegradable</span>
+                  </li>
+                  <li className="flex items-center text-dartmouth-green">
+                    <div className="w-3 h-3 bg-mint-2 rounded-full mr-4 flex-shrink-0" />
+                    <span>Leaves clothes fresh &amp; clean</span>
+                  </li>
+                </ul>
+                <Link to="/products/feathers-organic-fabric-wash">
+                  <Button
+                    size="lg"
+                    className="px-8 py-4 text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-200"
+                  >
+                    Shop Fabric Wash
+                    <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Organic Floor Wash Section */}
+        <div className="mb-16">
+          <div className="bg-gradient-to-br from-mint/20 to-sea-green/20 rounded-3xl shadow-lg p-8 lg:p-12 border border-sea-green/30">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-brunswick-green mb-6">
+                  Organic Floor Wash
+                </h2>
+                <p className="text-lg text-dartmouth-green mb-6 leading-relaxed">
+                  Keep your floors shining and germ-free the natural way. Our organic formula fights germs and leaves behind a fresh, clean fragrance.
+                </p>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center text-dartmouth-green">
+                    <div className="w-3 h-3 bg-mint-2 rounded-full mr-4 flex-shrink-0" />
+                    <span>Sparkling clean finish</span>
+                  </li>
+                  <li className="flex items-center text-dartmouth-green">
+                    <div className="w-3 h-3 bg-mint-2 rounded-full mr-4 flex-shrink-0" />
+                    <span>Natural germ protection</span>
+                  </li>
+                  <li className="flex items-center text-dartmouth-green">
+                    <div className="w-3 h-3 bg-mint-2 rounded-full mr-4 flex-shrink-0" />
+                    <span>Fresh, clean fragrance</span>
+                  </li>
+                </ul>
+                <Link to="/products/feathers-organic-floor-wash">
+                  <Button
+                    size="lg"
+                    className="px-8 py-4 text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-200"
+                  >
+                    Shop Floor Wash
+                    <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </Link>
+              </div>
+              <div className="text-center relative">
+                <Link to="/products/feathers-organic-floor-wash">
+                  <div className="relative group overflow-hidden rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-300 cursor-pointer">
+                    <div className="bg-gradient-to-br from-white to-mint/30 p-6">
+                      <img
+                        src={FLOOR_IMAGE.src}
+                        srcSet={FLOOR_IMAGE.srcSet}
+                        sizes="(max-width: 480px) 280px, (max-width: 768px) 400px, (max-width: 1024px) 480px, 520px"
+                        alt="Organic Floor Wash Product"
+                        width={586}
+                        height={586}
+                        className="w-full h-auto object-contain max-w-md mx-auto transform group-hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                      <div className="bg-dartmouth-green text-white px-6 py-2 rounded-full text-sm font-semibold shadow-lg">
+                        Natural Protection
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Combo Offer Section */}
+        <div className="mb-16">
+          <div className="relative z-10 text-center bg-gradient-to-r from-brunswick-green to-dark-green text-white rounded-2xl shadow-xl p-12 overflow-hidden">
+            <div className="absolute top-0 left-1/4 w-96 h-96 bg-mint/10 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-celadon/10 rounded-full blur-3xl" />
+            <div className="relative z-10">
+              <Link to="/products">
+                <div
+                  className="max-w-4xl mx-auto mb-8 relative overflow-hidden rounded-lg shadow-xl cursor-pointer hover:shadow-2xl transition-shadow duration-300"
+                  style={{ paddingTop: '64.28%' }}
+                >
+                  <img
+                    src={COMBO_IMAGE.src}
+                    srcSet={COMBO_IMAGE.srcSet}
+                    sizes="(max-width: 480px) 280px, (max-width: 768px) 400px, (max-width: 1024px) 500px, 548px"
+                    alt="Organic Combo Offer - Dish, Fabric, Floor Wash"
+                    width={1400}
+                    height={900}
+                    className="absolute inset-0 w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </Link>
+
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                ✨ The Perfect Trio – Just ₹799
+              </h2>
+              <p className="text-xl text-celadon mb-12 max-w-3xl mx-auto leading-relaxed">
+                Get all three – Dish Wash, Fabric Wash, and Floor Wash – in one affordable combo. Save money and keep your home naturally clean.
+              </p>
+
+              <Link to="/products">
+                <Button
+                  size="lg"
+                  variant="secondary"
+                  className="px-12 py-4 text-xl font-bold shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300 bg-mint-2 hover:bg-mint border-0"
+                >
+                  👉 Grab the Combo Now
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};

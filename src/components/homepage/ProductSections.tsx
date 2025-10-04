@@ -1,0 +1,65 @@
+@@ .. @@
+                       <img
+-                          src="/images/fabricwash/Fabric-5_ixgphh_c_scale,w_536.png"
+-                          srcSet="/images/fabricwash/Fabric-5_ixgphh_c_scale,w_200.png 200w,
+-                                  /images/fabricwash/Fabric-5_ixgphh_c_scale,w_313.png 313w,
+-                                  /images/fabricwash/Fabric-5_ixgphh_c_scale,w_399.png 399w,
+-                                  /images/fabricwash/Fabric-5_ixgphh_c_scale,w_474.png 474w,
+-                                  /images/fabricwash/Fabric-5_ixgphh_c_scale,w_536.png 536w,
+-                                  /images/fabricwash/Fabric-5_ixgphh_c_scale,w_589.png 589w,
+-                                  /images/fabricwash/Fabric-5_ixgphh_c_scale,w_638.png 638w,
+-                                  /images/fabricwash/Fabric-5_ixgphh_c_scale,w_684.png 684w,
+-                                  /images/fabricwash/Fabric-5_ixgphh_c_scale,w_729.png 729w,
+-                                  /images/fabricwash/Fabric-5_ixgphh_c_scale,w_765.png 765w,
+-                                  /images/fabricwash/Fabric-5_ixgphh_c_scale,w_807.png 807w,
+-                                  /images/fabricwash/Fabric-5_ixgphh_c_scale,w_843.png 843w,
+-                                  /images/fabricwash/Fabric-5_ixgphh_c_scale,w_879.png 879w,
+-                                  /images/fabricwash/Fabric-5_ixgphh_c_scale,w_915.png 915w,
+-                                  /images/fabricwash/Fabric-5_ixgphh_c_scale,w_949.png 949w,
+-                                  /images/fabricwash/Fabric-5_ixgphh_c_scale,w_982.png 982w,
+-                                  /images/fabricwash/Fabric-5_ixgphh_c_scale,w_1017.png 1017w,
+-                                  /images/fabricwash/Fabric-5_ixgphh_c_scale,w_1023.png 1023w,
+-                                  /images/fabricwash/Fabric-5_ixgphh_c_scale,w_1024.png 1024w"
++                          src="/images/fabricwash/Fabric-5_ofd7mz_c_scale,w_536.png"
++                          srcSet="/images/fabricwash/Fabric-5_ofd7mz_c_scale,w_313.png 313w,
++                                  /images/fabricwash/Fabric-5_ofd7mz_c_scale,w_399.png 399w,
++                                  /images/fabricwash/Fabric-5_ofd7mz_c_scale,w_474.png 474w,
++                                  /images/fabricwash/Fabric-5_ofd7mz_c_scale,w_536.png 536w,
++                                  /images/fabricwash/Fabric-5_ofd7mz_c_scale,w_589.png 589w,
++                                  /images/fabricwash/Fabric-5_ofd7mz_c_scale,w_638.png 638w,
++                                  /images/fabricwash/Fabric-5_ofd7mz_c_scale,w_729.png 729w,
++                                  /images/fabricwash/Fabric-5_ofd7mz_c_scale,w_765.png 765w,
++                                  /images/fabricwash/Fabric-5_ofd7mz_c_scale,w_843.png 843w,
++                                  /images/fabricwash/Fabric-5_ofd7mz_c_scale,w_879.png 879w,
++                                  /images/fabricwash/Fabric-5_ofd7mz_c_scale,w_949.png 949w,
++                                  /images/fabricwash/Fabric-5_ofd7mz_c_scale,w_982.png 982w,
++                                  /images/fabricwash/Fabric-5_ofd7mz_c_scale,w_1023.png 1023w"
+@@ .. @@
+                         <img
+-                          src="/images/floorwash/FloorWash-4_nahtqx_c_scale,w_586.png"
+-                          srcSet="/images/floorwash/FloorWash-4_nahtqx_c_scale,w_200.png 200w,
+-                                  /images/floorwash/FloorWash-4_nahtqx_c_scale,w_311.png 311w,
+-                                  /images/floorwash/FloorWash-4_nahtqx_c_scale,w_396.png 396w,
+-                                  /images/floorwash/FloorWash-4_nahtqx_c_scale,w_470.png 470w,
+-                                  /images/floorwash/FloorWash-4_nahtqx_c_scale,w_532.png 532w,
+-                                  /images/floorwash/FloorWash-4_nahtqx_c_scale,w_586.png 586w,
+-                                  /images/floorwash/FloorWash-4_nahtqx_c_scale,w_635.png 635w,
+-                                  /images/floorwash/FloorWash-4_nahtqx_c_scale,w_681.png 681w,
+-                                  /images/floorwash/FloorWash-4_nahtqx_c_scale,w_728.png 728w,
+-                                  /images/floorwash/FloorWash-4_nahtqx_c_scale,w_766.png 766w,
+-                                  /images/floorwash/FloorWash-4_nahtqx_c_scale,w_805.png 805w,
+-                                  /images/floorwash/FloorWash-4_nahtqx_c_scale,w_843.png 843w,
+-                                  /images/floorwash/FloorWash-4_nahtqx_c_scale,w_879.png 879w,
+-                                  /images/floorwash/FloorWash-4_nahtqx_c_scale,w_914.png 914w,
+-                                  /images/floorwash/FloorWash-4_nahtqx_c_scale,w_948.png 948w,
+-                                  /images/floorwash/FloorWash-4_nahtqx_c_scale,w_981.png 981w,
+-                                  /images/floorwash/FloorWash-4_nahtqx_c_scale,w_1014.png 1014w,
+-                                  /images/floorwash/FloorWash-4_nahtqx_c_scale,w_1023.png 1023w,
+-                                  /images/floorwash/FloorWash-4_nahtqx_c_scale,w_1024.png 1024w"
++                          src="/images/floorwash/FloorWash-4_nahtqx_c_scale,w_586.png"
++                          srcSet="/images/floorwash/FloorWash-4_nahtqx_c_scale,w_200.png 200w,
++                                  /images/floorwash/FloorWash-4_nahtqx_c_scale,w_586.png 586w,
++                                  /images/floorwash/FloorWash-4_nahtqx_c_scale,w_681.png 681w,
++                                  /images/floorwash/FloorWash-4_nahtqx_c_scale,w_728.png 728w,
++                                  /images/floorwash/FloorWash-4_nahtqx_c_scale,w_914.png 914w,
++                                  /images/floorwash/FloorWash-4_nahtqx_c_scale,w_981.png 981w"
